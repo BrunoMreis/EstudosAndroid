@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#570D109B"
     tools:context="com.reis.jokenpo.MainActivity">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imgTesoura"
         android:layout_width="114dp"
         android:layout_height="0dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:onClick="selecionarTesoura"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPapel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imgPapel"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/tesoura" />
 
@@ -34,20 +35,20 @@
         tools:visibility="visible" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/s"
         android:layout_width="114dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:onClick="selecionarPedra"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPapel"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imgPapel"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/pedra" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imgPapel"
         android:layout_width="114dp"
         android:layout_height="0dp"
         android:onClick="selecionarPapel"
@@ -64,7 +65,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Escolha uma opção abaixo"
-        android:textSize="25sp"
+        android:textSize="36sp"
+        android:textStyle="bold|italic"
+        app:fontFamily="cursive"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
