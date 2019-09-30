@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Componentes Básicos</string>
+    <string name="hint">Nome do Produto</string>
+    <string name="btnEnviar">Enviar</string>
+    <string name="cbBranca">Branca</string>
+    <string name="cbPreta">Preta</string>
+    <string name="cbAzul">Azul</string>
+    <string name="resultado">Resultado</string>
+</resources>

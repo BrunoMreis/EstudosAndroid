@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint" />
+
+        <CheckBox
+            android:id="@+id/cbPreta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="@string/cbPreta" />
+
+        <CheckBox
+            android:id="@+id/cbBranca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="@string/cbBranca" />
+
+        <CheckBox
+            android:id="@+id/cbAzul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="@string/cbAzul" />
+
+        <TextView
+            android:id="@+id/txtDisponivel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Disponível em estoque" />
+
+        <RadioGroup
+            android:id="@+id/rbEstoque"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioSim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SIM" />
+
+            <RadioButton
+                android:id="@+id/radioNao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NÃO" />
+        </RadioGroup>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:onClick="btnEnviar"
+            android:text="@string/btnEnviar" />
+
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="@string/resultado" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
