@@ -4,13 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
 
 public class MainActivity extends AppCompatActivity {
-    private TextInputEditText txtAlcool;
-    private TextInputEditText txtGasolina;
+    private EditText txtAlcool;
+    private EditText txtGasolina;
     private double alcool;
     private double gasolina;
 

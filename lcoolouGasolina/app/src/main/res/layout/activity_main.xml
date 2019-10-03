@@ -33,12 +33,14 @@
         android:layout_height="wrap_content"
         android:layout_weight="0">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/inputAlcool"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Preço do álcool. ex: 2.88" />
-
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Preço álcool. Ex 2.88"
+            android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -46,11 +48,13 @@
         android:layout_height="wrap_content"
         android:layout_weight="0">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/inputGasolina"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Preço da Gasolina. Ex 3.60" />
+            android:ems="10"
+            android:hint="Preço gasolina. EX 3.60"
+            android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
