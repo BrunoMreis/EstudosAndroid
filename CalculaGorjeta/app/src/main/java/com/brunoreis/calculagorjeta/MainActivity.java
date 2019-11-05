@@ -10,12 +10,16 @@ import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
     private EditText inputValor;
     private SeekBar seekBar;
     private TextView textPorcentagem;
     private TextView textValorGorjeta;
     private TextView textTotal;
+
+    private DecimalFormat decimalFormat;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -28,17 +32,13 @@ public class MainActivity extends AppCompatActivity {
         textPorcentagem = findViewById(R.id.textPorcentagem);
         textValorGorjeta = findViewById(R.id.textValorGorjeta);
         textTotal = findViewById(R.id.textTotal);
+        decimalFormat = new DecimalFormat("0.00");
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 textPorcentagem.setText(progress + "%");
-                Double gorjeta = Double.parseDouble(inputValor.getText().toString());
-                gorjeta = gorjeta * progress /100;
-                textValorGorjeta.setText("R$ "+ gorjeta );
-                Double total = Double.parseDouble(inputValor.getText().toString());
-                total += gorjeta;
-                textTotal.setText("R$ " + total);
+                calcula();
 
             }
 
@@ -53,6 +53,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    public void calcula(){
+
+        Double gorjeta = Double.parseDouble(inputValor.getText().toString());
+        gorjeta = gorjeta * seekBar.getProgress() /100;
+        textValorGorjeta.setText("R$ "+ decimalFormat.format(gorjeta) );
+        Double total = Double.parseDouble(inputValor.getText().toString());
+        total += gorjeta;
+        textTotal.setText("R$ " + decimalFormat.format(total));
 
     }
 }
