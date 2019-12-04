@@ -22,10 +22,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),SegundaActivity.class);
+                Usuario usuario = new Usuario("Bruno M. Reis",29);
 
                 //passar dados
-                intent.putExtra("nome","Bruno M Reis");
-                intent.putExtra("idade",29);
+//                intent.putExtra("nome","Bruno M Reis");
+//                intent.putExtra("idade",29);
+                  intent.putExtra("usuario", usuario);
 
                 startActivity(intent);
 

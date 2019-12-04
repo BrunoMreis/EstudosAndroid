@@ -8,16 +8,23 @@ import android.widget.TextView;
 public class SegundaActivity extends AppCompatActivity {
     private TextView textNome;
     private TextView textIdade;
+    private Usuario usuario;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segunda);
 
-        textNome = findViewById(R.id.textNome);
-        textIdade = findViewById(R.id.textIdade);
+//        textNome = findViewById(R.id.textNome);
+//        textIdade = findViewById(R.id.textIdade);
+
 
         Bundle dados = getIntent().getExtras();
-        textIdade.setText(""+dados.getInt("idade"));
-        textNome.setText(dados.getString("nome"));
+        usuario = (Usuario) dados.getSerializable("usuario");
+
+//        textIdade.setText(""+dados.getInt("idade"));
+//        textNome.setText(dados.getString("nome"));
+//
+        textIdade.setText(""+usuario.getIdade());
+        textNome.setText(usuario.getNome());
     }
 }
