@@ -11,7 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal|center_vertical"
-        android:text="Conversas "
-        android:textSize="24sp" />
+        android:text="Contatos"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="Contatos" />
 
 </FrameLayout>
